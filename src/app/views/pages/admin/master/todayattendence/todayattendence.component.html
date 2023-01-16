@@ -1,0 +1,36 @@
+<div class="container">
+  <h4 class="text-primary" >Employee Attendance</h4>
+    <div class="py-lg-3">
+        <table class="table shadow  table-striped">
+            <thead>
+              <tr>
+                <!-- <th scope="col">Sn.No</th> -->
+                <th scope="col">Date</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Employee Login Time</th>
+                <th scope="col">Employee Logout Time</th>
+                <th scope="col">Employee Status</th>
+                <th scope="col">Production</th>
+                <th scope="col">Shift</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of todayattendence">
+                <!-- <td>{{row.id}}</td> -->
+                <td>{{row.CreatedDate|date: 'MMM d, y'}}</td>
+                <td class="cursor-pointer text-primary"  >
+                  <!-- {{row.EmployeeName}} -->
+                  <p (click)="getEmployeeDetails({empname:row.EmployeeName})">{{row.EmployeeName}}</p>
+                </td>
+                <td>{{row.PunchIn|date: 'h:mm:ss a'}}</td>
+                <td>{{row.Punchout|date: 'h:mm:ss a'}}</td>
+                <td class="badge text-success" >{{row.EmpStatus}}</td>
+                <td>8 hrs</td>
+                <td>Day Shift</td>
+              </tr> 
+            </tbody>
+          </table>
+    </div>
+    </div>
+    
+    

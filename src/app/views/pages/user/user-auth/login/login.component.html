@@ -1,0 +1,49 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <div class="">
+          <h2 class="text-center lead fw-normal mb-0 me-3 py-3"> <b> Welcome To EMS </b> </h2>
+          <!-- <p class="lead fw-normal mb-0 me-3 py-3"> <b>Need a account ? <span class="text-info cursor-pointer" (click)="backtoRegister()">sign up</span> </b> </p> -->
+          <p class="lead fw-normal mb-0 me-3 py-3"> <b>Need To Log In Your Account </b> </p>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+          <!-- Email input -->
+          <div class="form-group">
+            <label for="inputEmailAddress" class="form-label">Email</label>
+            <input formControlName="email" type="email" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && user['email'].errors }" placeholder="Email Address">
+            <div *ngIf="submitted && user['email'].errors" class="invalid-feedback">
+              <div *ngIf="user['email'].errors['required']">Email is required</div>
+            </div>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-group">
+            <label for="inputChoosePassword" class="form-label">Password</label>
+            <div class="input-group" id="show_hide_password">
+              <input formControlName="Password" type="password" class="form-control border-end-0"
+                [ngClass]="{ 'is-invalid': submitted && user['Password'].errors }" placeholder="Enter Password"> <a
+                href="#" (click)="$event.preventDefault()" class="input-group-text bg-transparent"><i
+                  class='bx bx-hide'></i></a>
+              <div *ngIf="submitted && user['Password'].errors" class="invalid-feedback">
+                <div *ngIf="user['Password'].errors['required']">Password is required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <button class="btn btn-primary px-3 py-2 text-centre">Login</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a class="link-danger"
+                (click)="onRegister()">Register</a></p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>

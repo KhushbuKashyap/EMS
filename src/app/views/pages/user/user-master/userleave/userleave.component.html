@@ -1,0 +1,117 @@
+<div class="container-fluid">
+    <div class="box">
+        <h2 class="text-primary">My Leaves</h2>
+    </div>
+
+    <div class="card p-3">
+        <div class="box breadcrumb ">
+            <div class="card-body py-2 mb-0">
+                <div class="row">
+                    <div class="py-2">
+                        <p class="text-muted"><b>Leave Requests</b></p>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control form-input" style="border-radius: 20px; height: 45px;">
+                    </div>
+                    <div class=" py-1">
+                        <button class="add btn btn-primary rounded-circle" title='Add a leave request'>
+                            <i class="fa fa-plus" aria-hidden="true" (click)="open(content)"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <!-- <div class="card"> -->
+            <div class="card-body">
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Apply Date</th>
+                        <th scope="col">From Date</th>
+                        <th scope="col">To Date</th>
+                        <th scope="col">Half Day</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Reason</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">---</th>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">---</th>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">---</th>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+        <!-- </div> -->
+
+    </div>
+
+</div>
+
+
+
+
+<!-- Modal -->
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="mb-3">
+				<label for="dateOfBirth">Date of birth</label>
+				<div class="input-group">
+					<input
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="yyyy-mm-dd"
+						name="dp"/>
+					<button class="btn btn-outline-secondary bi bi-calendar3" type="button"></button>
+                    <!-- (click)="dp.toggle()" -->
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+	</div>
+</ng-template>
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+
+<hr />
+
+<!-- <pre>{{ closeResult }}</pre> -->

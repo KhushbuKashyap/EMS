@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "attendceData": [
+    {
+      "employeeStatus": "Present",
+      "employeeUsername": "sahilgrv77@gmail.com",
+      "employeeLogintime": "12:27",
+      "employeeLogouttime": "12:27",
+      "date": "30-12-2022",
+      "id": 1
+    },
+    {
+      "employeeStatus": "Present",
+      "employeeUsername": "sahilgrv@gmail.com",
+      "employeeLogintime": "16:41",
+      "employeeLogouttime": "16:42",
+      "date": "30-12-2022",
+      "id": 2
+    }
+  ],
+  "Signup": [
+    {
+      "employeename": "Sahil",
+      "mobile": "6280994499",
+      "email": "sahilgrv@gmail.com",
+      "Password": "123",
+      "id": 1
+    },
+    {
+      "employeename": "Deepak",
+      "mobile": "4567889544",
+      "email": "deepakjoshi@gmail.com",
+      "Password": "123",
+      "id": 2
+    }
+  ]
+}
